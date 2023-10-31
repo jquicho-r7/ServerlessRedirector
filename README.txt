@@ -27,8 +27,8 @@ Based on: https://blog.xpnsec.com/aws-lambda-redirector/
 			(nix) `curl -o- -L https://slss.io/install | VERSION=3.35.2 bash`
 			(win) `npm install -g serverless`
 
-	2. Configure AWS credentials in serverless:
-		# In AWS:
+	2. Configure AWS credentials in serverless (not written for R7 DivvyCloud/AWS yet):
+		# In AWS Console:
 			1. Create an AWS user:
 				> https://console.aws.amazon.com/iamv2/home#/users
 			2. Create keys for the AWS user:
@@ -39,9 +39,7 @@ Based on: https://blog.xpnsec.com/aws-lambda-redirector/
 				> Copy access key id and secret access key
 
 		# In CLI:
-			(nix & win) `sls config credentials`
-				> Enter AWS access key id and secret access key
-					(nix) `sls config credentials --key {access_key} --secret {secret_key} --provider aws -o`
+			(nix & win) `sls config credentials --key {access_key} --secret {secret_key} --provider aws -o`
 
 	3. Set TEAMSERVER parameter in 'serverless.yml':
 		Use the domain name or IP associated with your teamserver
