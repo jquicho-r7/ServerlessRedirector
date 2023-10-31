@@ -51,6 +51,8 @@ Based on: https://blog.xpnsec.com/aws-lambda-redirector/
 		You must also ensure your beacon profile calls out to port 443 to your lambda domain
 		The teamserver listener can be any port as long as you set the redirect url as shown above
 
+		**Optional** Change the 'service' parameter to whatever you want to name the redirector
+
 	4. Build the bootstrap binary:
 		(nix) Binary is built during make deploy
 		(win) Open cmd in the project folder & run:
